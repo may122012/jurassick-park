@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h2>Soma</h2>
+    <label>Valor 1</label>
+    <input id="soma_valor1" type="text"> <br><br>
+
+    <label>Valor 2</label>
+    <input id="soma_valor2" type="text"> <br><br>
+
+    <label>RESULTADO:</label>
+    <span id="soma_resultado">0</span> <br><br>
+
+    <button onclick="soma()">SOMAR</button>
+
+    <hr>
+
+    <h2>Subtração</h2>
+    <label>Valor 1</label>
+    <input id="sub_valor1" type="text"> <br><br>
+
+    <label>Valor 2</label>
+    <input id="sub_valor2" type="text"> <br><br>
+
+    <label>RESULTADO:</label>
+    <span id="sub_resultado">0</span> <br><br>
+
+    <button onclick="subtracao()">SUBTRAIR</button>
+
+     <hr>
+    <h2>Multiplicação</h2>
+   <label>Valor 1</label>
+    <input id="mult_valor1" type="text"> <br><br>
+
+    <label>Valor 2</label>
+    <input id="mult_valor2" type="text"> <br><br>
+
+    <label>RESULTADO:</label>
+    <span id="mult_resultado">0</span> <br><br>
+
+    <button onclick="multiplicacao()">MULTIPLICAR</button>
+
+    <hr>
+   <h2>Divisão</h2>
+    <label>Valor 1</label>
+    <input id="div_valor1" type="text"> <br><br>
+
+    <label>Valor 2</label>
+    <input id="div_valor2" type="text"> <br><br>
+
+    <label>RESULTADO:</label>
+    <span id="div_resultado">0</span> <br><br>
+    <button onclick="divisao()">DIVIDIR</button>
+    
+     <hr>
+    <script>
+      function soma() {
+        let n1 = parseFloat(document.getElementById("soma_valor1").value) || 0;
+        let n2 = parseFloat(document.getElementById("soma_valor2").value) || 0;
+        document.getElementById("soma_resultado").innerText = n1 + n2;
+      }
+
+      function subtracao() {
+        let n1 = parseFloat(document.getElementById("sub_valor1").value) || 0;
+        let n2 = parseFloat(document.getElementById("sub_valor2").value) || 0;
+        document.getElementById("sub_resultado").innerText = n1 - n2;
+      }
+
+      function multiplicacao() {
+        let n1 = parseFloat(document.getElementById("mult_valor1").value) || 0;
+        let n2 = parseFloat(document.getElementById("mult_valor2").value) || 0;
+        document.getElementById("mult_resultado").innerText = n1 * n2;
+      }
+
+       function divisao() {
+        let n1 = parseFloat(document.getElementById("div_valor1").value) || 0;
+        let n2 = parseFloat(document.getElementById("div_valor2").value) || 0;
+        document.getElementById("div_resultado").innerText = n1 / n2;
+      }
+    </script>
+  </body>
+</html>
